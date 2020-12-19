@@ -1,0 +1,396 @@
+@font-face{
+    font-family: Holidays;
+    src: url(fonts/MerryChristmasFlake.ttf);
+}
+@font-face{
+    font-family: bells;
+    src: url(fonts/Candcu__.ttf);
+}
+@font-face{
+    font-family: flakes;
+    src: url(fonts/KR\ Kinda\ Flakey.ttf);
+}
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    position: relative;
+    margin: 10px;
+    /* z-index: -3; */
+}
+.container::before{
+    content: '';
+    position:absolute;
+    background-image: linear-gradient(45deg,#B83927 10%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 20%, #B83927 20%, #B83927 30%, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0) 40%, #B83927 40%, #B83927 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 60%, #B83927 60%, #B83927 70%, rgba(255, 255, 255, 0) 70%);
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
+    left: -10px;
+    background-size: 120%;
+    background-position: 0 80%;
+    animation: bord1anime1 10s linear infinite;
+    z-index: -1;
+}
+.container::after{
+    content: '';
+    position:absolute;
+    background-image: linear-gradient(-135deg,#D1BEB2 10%, #428372 10%,#428372 20%, #D1BEB2 20%, #D1BEB2 30%, #428372 30%, #428372 40%, #D1BEB2 40%, #D1BEB2 50%, #428372 50%, #428372 60%, #D1BEB2 60%, #D1BEB2 70%);
+    top: -10px;
+    bottom: -10px;
+    right: -10px;
+    left: -10px;
+    background-size: 120%;
+    background-position: 80% 0%;
+    animation: bord1anime2 10s linear infinite;
+    z-index: -2;
+}
+@keyframes bord1anime1{
+    50%{
+        background-position: 80% 0;
+    }
+}
+@keyframes bord1anime2{
+    50%{
+        background-position: 0 80%;
+    }
+}
+.mainbox_background{
+    background-image: url(svgs/background.svg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    position: relative;
+}
+.mainbox_content_text{
+    text-align: center;
+    position: relative;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: -webkit-linear-gradient(-97deg, #B83927 25%, #D1BEB2 25%, #D1BEB2 50%, #E7E7E7 50%, #E7E7E7 75%, #428372 75%, #428372 100%);
+    background-size: 20%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: Holidays;
+    font-size: 5em;
+    background-position: 0 10%;
+    animation: text_anime1 50s linear infinite;
+    z-index: 1;
+}
+@keyframes text_anime1 {
+    50%{
+        background-position: 100% 0;
+    }
+}
+.mainbox_content_text::before{
+    content: ' Merry \A Christmas';
+    white-space: pre;
+    position: absolute;
+    /* top: 100%; */
+    background: rgba(255, 255, 255, 0.781);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: scale(1);
+    opacity: 1;
+    z-index: 0;
+}
+.neol_lights_svg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+.st7{
+    opacity: 0.2;
+    animation: blink 2s ease infinite;
+}
+.st9{
+    opacity: 0.3;
+    animation: blink 1s ease infinite;
+}
+.st11{
+    opacity: 0.2;
+    animation: blink 2s ease infinite 1s;
+}
+.st5:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.st6:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.st7:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.st9:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+.st11:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
+@keyframes blink {
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.2;
+    }
+}
+.neol_lights_mobile{
+    display: none;
+}
+.mainbox_content_text_flakes{
+    margin-top: 80px;
+    font-family: bells;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    text-align: center;
+    align-items: center;
+}
+/* .mainbox_content_text_flakes::after{
+    
+} */
+.mainbox_content_text_flakes #p1{
+    background:rgba(255, 255, 255, 0.938);
+    font-size: 2em;
+    color: rgb(226, 93, 93);
+    padding: 10px;
+    border:white solid 7px;
+    border-radius: 20px;
+}
+.declaration p{
+    margin: 20px auto;    
+    width: 70vw;
+    font-family: bells;
+    text-align: center;
+    background:rgba(255, 255, 255, 0.938);
+    font-size: 2em;
+    color: rgb(49, 129, 53);
+    padding: 10px;
+    border:white solid 7px;
+    border-radius: 20px;
+}
+.mainbox_content_text_flakes #p2{
+    margin: 10px;
+    width: 70vw;
+    font-size: 1.5em;
+    color: rgb(92, 151, 102);
+    background:rgba(255, 255, 255, 0.918);
+    padding: 10px;
+    border:white solid 7px;
+    border-radius: 20px;
+}
+#p2 span{
+    color: rgb(233, 113, 113);
+    font-size: 2em;
+}
+.hanging_trees1{
+    position: absolute;
+    top: 6%;
+    left: 18%;
+    transform: translate(-82%,0);
+}
+.hanging_trees2{
+    position: absolute;
+    top: 0;
+    left: 35%;
+    transform: translate(-65%,0);
+}
+
+.hanging_trees4{
+    position: absolute;
+    top: 6%;
+    right: 15%;
+    transform: translate(85%,0);
+}
+.hanging_trees5{
+    position: absolute;
+    top: 0;
+    right:30%;
+    transform: translate(70%,0);
+}
+.hanging_trees_mobile{
+    display: none;
+}
+.pixabay_images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 90vw;
+    /* height: 50vh; */
+    background: rgba(255, 255, 255, 0.87);
+    border-radius: 20px;
+    border: rgba(219, 219, 219, 0) solid 7px;
+}
+.preview{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    padding:10px;
+    min-width: 100%;
+    border: rgb(255, 255, 255) solid 7px;
+    border-radius: 20px;
+}
+.lists{
+    padding: 7px;
+    margin-top: 10px;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    border: rgb(255, 255, 255) solid 7px;
+    border-radius: 20px;
+}
+.lists img{
+    padding:5px;
+}
+.ads{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 50vw;
+    background-color: rgba(255, 255, 255, 0.884);
+    border: white solid 7px;
+    border-radius: 20px;
+    margin: 0 auto;
+}
+.ads img{
+    max-width: 300px;
+    min-width: 100px;
+    padding: 7px;
+    border: white solid 7px;
+    border-radius: 10px;
+}
+.ads img:hover{
+    transform: scale(1.1);
+}
+.ads div{
+    padding: 20px;
+}
+.gis{
+    position: relative;
+    /* display: flex;
+    justify-content:center; */
+    /* width: 50%; */
+    /* border: black solid; */
+}
+.gis::after{
+    content: 'Greetingsisland';
+    position: absolute;
+    color: rgb(60, 145, 98);
+    left: 0;
+    right: 0;
+    top: 88%;
+    display: flex;
+    justify-content: center;
+    font-family: bells;
+    font-size: 2em;
+    padding: 10px;
+}
+.spark{
+    position: relative;
+}
+.spark::after{
+    content: 'Adobe Spark';
+    position: absolute;
+    color: rgb(60, 145, 98);
+    left: 0;
+    right: 0;
+    top: 88%;
+    display: flex;
+    justify-content: center;
+    font-family: bells;
+    font-size: 2em;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 700px){
+    .hanging_trees1{
+        display: none;
+    }
+    .hanging_trees2{
+        display: none;
+    }
+    .hanging_trees3{
+        display: none;
+    }
+    .hanging_trees4{
+        display: none;
+    }
+    .hanging_trees5{
+        display: none;
+    }
+    .hanging_trees_mobile{
+        display: inline;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+    }
+    .container{
+        height: 100%;
+    }
+    .neol_lights_svg{
+        display: none;
+    }
+    .neol_lights_mobile{
+        position:absolute;
+        top: 0;
+        left: 0px;
+        right: 0;
+        display: inline;
+    }
+    .st6{
+    opacity: 0.1;
+    animation: blink 2s ease infinite 500ms;
+    }
+    .st5{
+    opacity: 0.1;
+    animation: blink 1s ease infinite;
+    }
+    @keyframes blink {
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.1;
+    }
+    }
+    .mainbox_content_text{
+        padding-top: 250px;
+        /* margin-left: 50px;
+        margin-right: 50px; */
+    }
+    .mainbox_content_text_flakes{
+        margin-top: 0px;
+    }
+    .pixabay_images{
+        width: 90vw;
+    }
+    #p1{
+        width: 50vw;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .ads{
+        width: 90vw;
+    }
+}
