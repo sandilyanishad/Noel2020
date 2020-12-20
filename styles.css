@@ -367,7 +367,7 @@
     flex-direction: column;
     width: 50vw;
     background-color: rgba(255, 255, 255, 0.884);
-    border: white solid 7px;
+    border: rgb(255, 255, 255) solid 7px;
     border-radius: 20px;
     margin: 0 auto;
     margin-bottom: 10px;
@@ -386,9 +386,11 @@
     padding: 20px;
 }
 .boxes{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 .gis{
     position: relative;
@@ -430,6 +432,10 @@
     font-family: holidays;
     font-size: 3em;
     color: rgb(141, 67, 67);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 @media only screen and (max-width: 1200px){
     #s1{
