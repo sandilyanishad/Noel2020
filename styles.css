@@ -161,9 +161,7 @@
     text-align: center;
     align-items: center;
 }
-/* .mainbox_content_text_flakes::after{
-    
-} */
+
 .mainbox_content_text_flakes #p1{
     background:rgba(255, 255, 255, 0.938);
     font-size: 2em;
@@ -200,7 +198,7 @@
 }
 .hanging_trees1{
     position: absolute;
-    top: 6%;
+    top: 0%;
     left: 18%;
     transform: translate(-82%,0);
 }
@@ -213,7 +211,7 @@
 
 .hanging_trees4{
     position: absolute;
-    top: 6%;
+    top: 0%;
     right: 15%;
     transform: translate(85%,0);
 }
@@ -248,12 +246,112 @@
     border: rgb(255, 255, 255) solid 7px;
     border-radius: 20px;
 }
+.search_its{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
+    background-image: url(images/content/4510601.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    padding:10px;
+    min-width: 100%;
+    border: rgb(255, 255, 255) solid 7px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    z-index: 5;
+}
+#s1{
+    border: white solid 7px;
+    border-radius: 10px;
+    margin: 10px;
+    /* font-family: bells; */
+    font-size: 1.2em;
+}
+#s1:focus{
+    outline: none;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #696969;
+}
+#b1{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    align-items: center;
+    border: white solid;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: bells;
+    font-size: 1.4em;
+    color: rgb(65, 145, 92);
+}
+#b1:focus{
+    outline: none;
+}
+#b2{
+    color: rgb(58, 133, 98);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    align-items: center;
+    border: white solid;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: bells;
+    font-size: 1em;
+}
+
+#b3{
+    color: rgb(141, 67, 67);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    align-items: center;
+    border: white solid;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: bells;
+    font-size: 1em;
+}
+#b4{
+    color: rgb(141, 67, 67);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    height: 50%;
+    align-items: center;
+    border: white solid;
+    border-radius: 10px;
+    padding: 5px;
+    font-family: bells;
+    font-size: 1em;
+}
+#b1:hover, #b2:hover, #b3:hover, #b4:hover{
+    transform: scale(1.1);
+    box-shadow: 5px 2px 16px #e4e4e4;
+}
+.buttonsss{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.buttonsss div{
+    margin: 5px;
+}
 .lists{
     padding: 7px;
     margin-top: 10px;
     min-width: 100%;
     display: flex;
     justify-content: center;
+    align-items: baseline;
     flex-wrap: wrap;
     border: rgb(255, 255, 255) solid 7px;
     border-radius: 20px;
@@ -266,11 +364,13 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    flex-direction: column;
     width: 50vw;
     background-color: rgba(255, 255, 255, 0.884);
     border: white solid 7px;
     border-radius: 20px;
     margin: 0 auto;
+    margin-bottom: 10px;
 }
 .ads img{
     max-width: 300px;
@@ -285,6 +385,11 @@
 .ads div{
     padding: 20px;
 }
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 .gis{
     position: relative;
     /* display: flex;
@@ -298,7 +403,7 @@
     color: rgb(60, 145, 98);
     left: 0;
     right: 0;
-    top: 88%;
+    top: 89%;
     display: flex;
     justify-content: center;
     font-family: bells;
@@ -321,8 +426,18 @@
     font-size: 2em;
     padding: 10px;
 }
-
-@media only screen and (max-width: 700px){
+.intro p{
+    font-family: holidays;
+    font-size: 3em;
+    color: rgb(141, 67, 67);
+}
+@media only screen and (max-width: 1200px){
+    #s1{
+        font-size: 1.2em;
+    }
+    #b1, #b2, #b3{
+        font-size: 1.2em;
+    }
     .hanging_trees1{
         display: none;
     }
