@@ -33,7 +33,7 @@ b1.addEventListener('click', () => {
 });
 function loops() {
     si=setInterval(() => {
-        add_image_ele_to_preview.src = all_final_data.hits[counter++].largeImageURL;
+        add_image_ele_to_preview.src = all_final_data.hits[counter++].webformatURL;
         if (counter > all_final_data.hits.length - 1) {
             clearInterval(si);
             counter = 0;
@@ -45,7 +45,7 @@ b3.addEventListener('click', () => {
 });
 b4.addEventListener('click', () => {
     counter = 0;
-    add_image_ele_to_preview.src = all_final_data.hits[0].largeImageURL;
+    add_image_ele_to_preview.src = all_final_data.hits[0].webformatURL;
 });
 b2.addEventListener('click', () => {
     loops();
@@ -55,7 +55,7 @@ function fetch_data(info) {
         .then(data_first => data_first.json())
         .then(data_second => {
             all_final_data = data_second;
-            add_image_ele_to_preview.src = all_final_data.hits[(Math.floor(Math.random()*10000))%all_final_data.hits.length].largeImageURL;
+            add_image_ele_to_preview.src = all_final_data.hits[(Math.floor(Math.random()*10000))%all_final_data.hits.length].webformatURL;
             for (let i = 0; i < all_final_data.hits.length; i++){
                 add_image_ele_to_lists.src = all_final_data.hits[i].previewURL;
                 inside_lists.appendChild(add_image_ele_to_lists.cloneNode());
